@@ -1,0 +1,63 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This Solar Monitor is already set up.",
+      "cannot_connect": "Could not reach the Solar Monitor.",
+      "no_reading": "The Solar Monitor has not read its gateway yet. Try again in a minute.",
+      "reconfigure_successful": "The Solar Monitor's address was updated.",
+      "unique_id_mismatch": "That address belongs to a different solar system.",
+      "unsupported_firmware": "This Solar Monitor needs a firmware update (1.7.0 or later)."
+    },
+    "error": {
+      "cannot_connect": "Could not reach a Solar Monitor at that address.",
+      "no_reading": "The Solar Monitor has not read its gateway yet. Try again in a minute.",
+      "unsupported_firmware": "This Solar Monitor needs a firmware update (1.7.0 or later)."
+    },
+    "flow_title": "Solar Monitor ({host})",
+    "step": {
+      "discovery_confirm": {
+        "description": "Set up the Solar Monitor at {host}?"
+      },
+      "user": {
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "The Solar Monitor's IP address. Find it in the dashboard under Debug → Monitor, or in your router."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "exporting": { "name": "Exporting" },
+      "reporting": { "name": "Reporting" },
+      "weak": { "name": "Underperforming" }
+    },
+    "sensor": {
+      "production": { "name": "Solar production" },
+      "grid": { "name": "Grid power" },
+      "load": { "name": "Home load" },
+      "produced_today": { "name": "Solar produced today" },
+      "produced_lifetime": { "name": "Solar produced" },
+      "bought_lifetime": { "name": "Grid bought" },
+      "sold_lifetime": { "name": "Grid sold" },
+      "panels_reporting": { "name": "Panels reporting" },
+      "reading_age": { "name": "Reading age" },
+      "gateway_firmware": { "name": "Gateway firmware" },
+      "panel_power": { "name": "Power" },
+      "panel_lifetime": { "name": "Lifetime energy" },
+      "inverter_temperature": { "name": "Inverter temperature" },
+      "dc_voltage": { "name": "DC voltage" },
+      "dc_current": { "name": "DC current" }
+    }
+  },
+  "exceptions": {
+    "update_error": {
+      "message": "Could not read the Solar Monitor: {error}"
+    },
+    "no_reading": {
+      "message": "The Solar Monitor has not read its gateway yet."
+    }
+  }
+}
